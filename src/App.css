@@ -91,6 +91,7 @@ h1 {
 }
 
 .taskitem {
+  display: flex;
   background-color: transparent;
 }
 
@@ -106,4 +107,12 @@ textarea {
   width: 60%;
   height: 40px;
   margin-left: 30px;
+}
+
+.check {
+  color: #00b341;
+}
+
+.borrar {
+  color: #ff2825;
 }

@@ -5,11 +5,16 @@ import { FaRegWindowClose } from "react-icons/fa";
 const TaskItem = ({ task, deleteTask }) => {
   return (
     <div className="taskitem">
-      <FiCheckSquare />
-      <h3>{task.title}</h3>
-      <p>{task.description}</p>
+      <FiCheckSquare className="check" />
+      <div>
+        <h3>{task.title}</h3>
+        <p>{task.description}</p>
+      </div>
 
-      <FaRegWindowClose onClick={() => deleteTask(task.id)} />
+      <FaRegWindowClose
+        className="borrar"
+        onClick={() => deleteTask(task.id)}
+      />
 
       <hr />
     </div>
