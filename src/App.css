@@ -88,7 +88,10 @@ svg {
 }
 
 .nuevatarea {
-  float: left;
+  width: 800px;
+  height: 70px;
+  margin-left: 20px;
+  font-size: 26px;
 }
 .no-tareas {
   background-color: transparent;
@@ -96,12 +99,23 @@ svg {
 
 .taskitem {
   display: flex;
+  align-items: center;
+  gap: 15px;
   background-color: transparent;
 }
 
+.tareas {
+  margin-top: 10px;
+}
+
+.lista-tareas {
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
 .principal {
   background-color: transparent;
-
   width: 10px;
 }
 
@@ -116,10 +130,14 @@ textarea {
 
 .check {
   color: #00b341;
+  width: 55px;
+  height: 55px;
 }
 
 .borrar {
   color: #ff2825;
+  width: 50px;
+  height: 50px;
 }
 
 .cabecera {

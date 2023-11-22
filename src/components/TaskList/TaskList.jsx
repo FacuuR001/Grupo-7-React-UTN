@@ -7,7 +7,7 @@ const TaskList = ({ tasks, deleteTask }) => {
       {tasks.length === 0 ? (
         <h2>Aun no has agregado tareas.</h2>
       ) : (
-        <div>
+        <div className="lista-tareas">
           {tasks.map((task) => (
             <TaskItem
               task={task}

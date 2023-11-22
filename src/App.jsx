@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { TaskForm, TaskList } from "./components";
 import { CiSearch } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
 function App() {
   const [searchString, setSearchString] = useState("");
@@ -30,6 +31,14 @@ function App() {
 
   const handleChangeSearchString = (e) => {
     setSearchString(e.target.value);
+  };
+
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenNewTaskModal = () => {
+    setOpenModal(true);
+  };
+  const handleCloseNewTaskModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -70,19 +79,29 @@ function App() {
         <h3>
           N° Tareas: <p>5</p>
         </h3>
-        <CiSearch className="search" />
+        <CiSearch className="search" onClick={handleOpenNewTaskModal} />
+        {openModal && (
+          <div>
+            <h2>Buscar tarea:</h2>
+            <form>
+              <input
+                placeholder="Buscar tarea"
+                onChange={handleChangeSearchString}
+                value={searchString}
+              />
+              <div>
+                <button className="cerrar" onClick={handleCloseNewTaskModal}>
+                  <IoMdClose />
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
         <h3>
           Pendientes:<p>3</p>
         </h3>
       </div>
 
-      <form>
-        <input
-          placeholder="Buscar tarea"
-          onChange={handleChangeSearchString}
-          value={searchString}
-        />
-      </form>
       <TaskForm addTask={addTask} />
       <TaskList tasks={currentTask} deleteTask={deleteTask} />
     </div>

@@ -27,7 +27,7 @@ const TaskForm = ({ addTask }) => {
     <div className="principal">
       <button className="nuevatarea" onClick={handleOpenNewTaskModal}>
         {" "}
-        Nueva Tarea{" "}
+        AGREGAR TAREA +{" "}
       </button>
       {openModal && (
         <div className="modal-background">

@@ -6,7 +6,7 @@ const TaskItem = ({ task, deleteTask }) => {
   return (
     <div className="taskitem">
       <FiCheckSquare className="check" />
-      <div>
+      <div className="tareas">
         <h3>{task.title}</h3>
         <p>{task.description}</p>
       </div>
@@ -15,8 +15,6 @@ const TaskItem = ({ task, deleteTask }) => {
         className="borrar"
         onClick={() => deleteTask(task.id)}
       />
-
-      <hr />
     </div>
   );
 };
