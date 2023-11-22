@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Inter:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  max-width: 1200px;
+  margin: 50px auto;
+  background: linear-gradient(to right, #3e9fdb, #5844e9);
+}
+
+#root {
+  background-color: transparent;
+}
+div {
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  background-color: white;
+}
+
+button {
+  width: 170px;
+  height: 40px;
+  background-color: #00abfb;
+  color: white;
+  margin: 10px;
+  border-radius: 29px;
+  border-color: transparent;
+}
+button:hover {
+  background-color: #0c6cb0;
+}
+.buscar-tarea {
+  width: 800px;
+  height: auto;
+  margin-left: 50%;
+  border-radius: 50px;
+}
+
+h1 {
+  margin-left: 15%;
+  margin-right: 15px;
+  margin-top: 5%;
+  font-size: 63px;
+}
+
+.contadores {
+  margin-left: 20%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contadores p {
+  display: inline;
+  margin-left: 10px;
+  color: #ff9960;
+}
+.modal {
+  border-radius: 50px;
+}
+.modal h2 {
+  margin-left: 50px;
+}
+
+.titulo {
+  margin: 50px;
+  display: flex;
+}
+
+.descripcion {
+  margin-left: 50px;
+}
+.botones {
+  height: auto;
+  background-color: transparent;
+  margin-left: 30%;
+  margin-top: -100px;
+}
+
+.nuevatarea {
+  float: left;
+}
+.no-tareas {
+  background-color: transparent;
+}
+
+.taskitem {
+  background-color: transparent;
+}
+
+.principal {
+  background-color: transparent;
+
+  width: 10px;
+}
+
+input,
+textarea {
+  border-radius: 15px;
+  width: 60%;
+  height: 40px;
+  margin-left: 30px;
+}
