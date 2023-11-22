@@ -81,7 +81,7 @@ function App() {
         </h3>
         <CiSearch className="search" onClick={handleOpenNewTaskModal} />
         {openModal && (
-          <div>
+          <div className="buscador">
             <h2>Buscar tarea:</h2>
             <form>
               <input
@@ -90,9 +90,10 @@ function App() {
                 value={searchString}
               />
               <div>
-                <button className="cerrar" onClick={handleCloseNewTaskModal}>
-                  <IoMdClose />
-                </button>
+                <IoMdClose
+                  className="cerrar"
+                  onClick={handleCloseNewTaskModal}
+                />
               </div>
             </form>
           </div>

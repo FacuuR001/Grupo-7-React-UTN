@@ -68,23 +68,35 @@ svg {
 }
 .modal {
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .modal h2 {
-  margin-left: 50px;
+  margin-left: 37%;
+  margin-top: 5%;
+  font-size: 32px;
 }
 
-.titulo {
-  margin: 50px;
+.titulo textarea {
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  width: 800px;
+  height: 100px;
 }
 
-.descripcion {
+.descripcion textarea {
   margin-left: 50px;
+  padding: 10px;
+  width: 800px;
+  height: 100px;
 }
 .botones {
   height: auto;
   background-color: transparent;
   margin-left: 30%;
-  margin-top: -100px;
+  margin-top: 50px;
 }
 
 .nuevatarea {
@@ -152,4 +164,8 @@ textarea {
   width: 50px;
   height: 50px;
   margin-top: -20px;
+}
+
+.buscador input {
+  padding: 10px;
 }

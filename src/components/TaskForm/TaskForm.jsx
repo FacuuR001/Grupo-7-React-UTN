@@ -32,15 +32,19 @@ const TaskForm = ({ addTask }) => {
       {openModal && (
         <div className="modal-background">
           <div className="modal">
-            <h2>Agregar nueva Tarea</h2>
+            <h2>AGREGAR TAREA:</h2>
             <form onSubmit={handleAddNewTask}>
               <div className="titulo">
-                <input placeholder="titulo ejemplo" id="title" name="title" />
+                <textarea
+                  placeholder="Ingrese un título"
+                  id="title"
+                  name="title"
+                ></textarea>
               </div>
 
               <div className="descripcion">
                 <textarea
-                  placeholder="descripcion"
+                  placeholder="Ingrese una descripcion"
                   id="description"
                   name="description"
                 ></textarea>
