@@ -35,12 +35,10 @@ const TaskForm = ({ addTask }) => {
             <h2>Agregar nueva Tarea</h2>
             <form onSubmit={handleAddNewTask}>
               <div className="titulo">
-                <label htmlFor="title">Ingrese el titulo</label>
                 <input placeholder="titulo ejemplo" id="title" name="title" />
               </div>
 
               <div className="descripcion">
-                <label htmlFor="description">Ingrese la descripcion:</label>
                 <textarea
                   placeholder="descripcion"
                   id="description"

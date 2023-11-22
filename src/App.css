@@ -11,6 +11,7 @@ body {
   max-width: 1200px;
   margin: 50px auto;
   background: linear-gradient(to right, #3e9fdb, #5844e9);
+  overflow: hidden;
 }
 
 #root {
@@ -18,7 +19,7 @@ body {
 }
 div {
   width: 500px;
-  height: 200px;
+  height: auto;
   padding: 10px;
   background-color: white;
 }
@@ -36,19 +37,23 @@ button:hover {
   background-color: #0c6cb0;
 }
 .buscar-tarea {
-  width: 800px;
+  width: 900px;
   height: auto;
-  margin-left: 50%;
+  margin-left: 28%;
   border-radius: 50px;
 }
 
 h1 {
   margin-left: 15%;
-  margin-right: 15px;
   margin-top: 5%;
   font-size: 63px;
 }
 
+svg {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
 .contadores {
   margin-left: 20%;
   margin-top: 30px;
@@ -70,7 +75,6 @@ h1 {
 
 .titulo {
   margin: 50px;
-  display: flex;
 }
 
 .descripcion {
@@ -107,6 +111,7 @@ textarea {
   width: 60%;
   height: 40px;
   margin-left: 30px;
+  border-color: #636060;
 }
 
 .check {
@@ -115,4 +120,18 @@ textarea {
 
 .borrar {
   color: #ff2825;
+}
+
+.cabecera {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  gap: 50px;
+}
+
+.search {
+  color: #00abfb;
+  width: 50px;
+  height: 50px;
+  margin-top: -20px;
 }
