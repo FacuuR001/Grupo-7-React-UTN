@@ -108,6 +108,9 @@ svg {
 .no-tareas {
   background-color: transparent;
 }
+.no-tareas h2 {
+  padding: 30px;
+}
 
 .taskitem {
   display: flex;
