@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "./TaskList.css";
 import TaskItem from "../TaskItem/TaskItem";
 
 const TaskList = ({ tasks, deleteTask }) => {

@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Hacer la compra",
+      "description": "Comprar los ingredientes para la cena.",
+      "completed": false,
+      "pending": true
+    },
+    {
+      "id": 2,
+      "title": "Estudiar para el examen",
+      "description": "Revisar los apuntes y hacer ejercicios prácticos.",
+      "completed": true,
+      "pending": false
+    },
+    {
+      "id": 3,
+      "title": "Escribir informe",
+      "description": "Preparar un informe sobre los resultados del proyecto.",
+      "completed": false,
+      "pending": true
+    },
+    {
+      "id": 4,
+      "title": "Hacer ejercicio",
+      "description": "Ir al gimnasio y hacer una rutina de ejercicios.",
+      "completed": false,
+      "pending": true
+    }
+  ]
+  

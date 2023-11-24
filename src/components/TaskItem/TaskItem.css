@@ -1,0 +1,49 @@
+.taskitem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+  }
+  
+  .tareas {
+    margin-top: 10px;
+  }
+  
+.check {
+    color: #636060;
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .delete-task, .edit-task {
+    color: #ff2825;
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .delete-task {
+    color: #ff2825;
+    
+  }
+
+  .edit-task {
+    color: #00ABFB;
+    margin-right: .5rem;
+  }
+
+  .acordion {
+    width: 814px;
+    max-width: 814px;
+    overflow-wrap: break-word;
+    padding: 1rem;
+    background: red;
+    border-bottom: 1px solid #636060;
+  }
+
+ 
+  

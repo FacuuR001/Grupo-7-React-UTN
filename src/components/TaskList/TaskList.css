@@ -1,0 +1,21 @@
+.no-tareas {
+    display: flex;
+    justify-content:center;
+    height: 250px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.no-tareas h2 {
+    padding: 30px;
+
+}
+.lista-tareas {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
