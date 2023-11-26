@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Inter:wght@400;500;700&display=swap");
+
+
+:root {
+    --gradient-color: linear-gradient(to right, #3e9fdb, #5844e9);
+    --color-primary-hover: #0c6cb0;
+    --color-secondary: #2ecc71;
+    --color-white: #fff;
+    --color-search: #00abfb;
+    --color-count-span: #ff9960;
+    --color-border-input: #636060;
+    --color-delete-task: #ff2825;
+    --color-edit-task: #00ABFB;
+    --color-border-bottom: #636060;
+    --color-check-task-incompleted: #636060;
+    --color-check-task-completed: #00B341;
+    --color-text-task-completed: #636060;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --font-family: Inter;
+  }
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }

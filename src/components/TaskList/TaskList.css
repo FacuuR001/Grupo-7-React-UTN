@@ -19,3 +19,15 @@
 }
 
 
+@media (max-width: 920px) {
+    .no-tareas {
+        height: 175px
+    }
+}
+
+@media (max-width: 580px) {
+    .sin-tareas {
+        font-size: 1.3rem;
+        text-align: center;;
+    }
+}

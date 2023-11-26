@@ -1,44 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TaskItem.css";
 import { FiCheckSquare } from "react-icons/fi";
 import { FaRegWindowClose } from "react-icons/fa";
-import { FaRegEdit } from "react-icons/fa";
+// import { FaRegEdit } from "react-icons/fa";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import EditTask from "../EditTask/EditTask";
 
-const TaskItem = ({ task, deleteTask }) => {
+const TaskItem = ({ task, deleteTask, handleCheckClick, handleUpdateTask }) => {
+  const [completed, setCompleted] = useState(false);
+
+  const handleCheckTask = () => {
+    setCompleted(!completed);
+    handleCheckClick(task.id);
+  };
+
   return (
     <div className="taskitem">
-      {/* <FiCheckSquare className="check" />
-      <div className="tareas">
-        <h3>{task.title}</h3>
-        <p>{task.description}</p>
-      </div>
-
-      <FaRegWindowClose
-        className="borrar"
-        onClick={() => deleteTask(task.id)}
-      /> */}
-
       <Accordion className="acordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <FiCheckSquare className="check" />
-          <Typography>{task.title}</Typography>
+          <FiCheckSquare
+            className={`check ${completed ? "completed-check" : ""}`}
+            onClick={handleCheckTask}
+          />
+          <Typography
+            className={`task-title ${completed ? "completed-typography" : ""}`}
+          >
+            {task.title}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{task.description}</Typography>
+          <Typography
+            className={completed ? "completed-typography-description" : ""}
+          >
+            {task.description}
+          </Typography>
           <FaRegWindowClose
             className="delete-task"
             onClick={() => deleteTask(task.id)}
           />
-          <FaRegEdit className="edit-task" />
+          <EditTask task={task} handleUpdateTask={handleUpdateTask} />
         </AccordionDetails>
       </Accordion>
     </div>

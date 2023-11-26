@@ -2,11 +2,16 @@ import React, { useEffect } from "react";
 import "./TaskList.css";
 import TaskItem from "../TaskItem/TaskItem";
 
-const TaskList = ({ tasks, deleteTask }) => {
+const TaskList = ({
+  tasks,
+  deleteTask,
+  handleCheckClick,
+  handleUpdateTask,
+}) => {
   return (
     <div className="no-tareas">
       {tasks.length === 0 ? (
-        <h2>Aun no has agregado tareas.</h2>
+        <h2 className="sin-tareas">Aun no has agregado tareas.</h2>
       ) : (
         <div className="lista-tareas">
           {tasks.map((task) => (
@@ -14,6 +19,8 @@ const TaskList = ({ tasks, deleteTask }) => {
               task={task}
               key={task.id}
               deleteTask={deleteTask}
+              handleCheckClick={handleCheckClick}
+              handleUpdateTask={handleUpdateTask}
             ></TaskItem>
           ))}
         </div>

@@ -8,17 +8,29 @@ const Contador = ({
   handleCloseNewTaskModal,
   openModal,
   searchString,
+  tasks,
 }) => {
+  // Obtener la cantidad total de tareas
+  const totalTasks = tasks.length;
+
+  // Filtrar tareas pendientes (sin completar)
+  const pendingTasks = tasks.filter((task) => !task.completed);
+  const totalPendingTasks = pendingTasks.length;
+
   return (
     <div className="contadores">
-      <p className="cantidad-tareas">
-        N° Tareas: <span>5</span>
-      </p>
-      <CiSearch className="search" onClick={handleOpenNewTaskModal} />
+      <div className="contadores-contenedor">
+        <p className="cantidad-tareas">
+          N° Tareas: <span>{totalTasks}</span>
+        </p>
+        <CiSearch className="search" onClick={handleOpenNewTaskModal} />
+        <p className="cantidad-pendientes">
+          Pendientes: <span>{totalPendingTasks}</span>
+        </p>
+      </div>
       {openModal && (
         <div className="buscador">
-          <h2>Buscar tarea:</h2>
-          <form>
+          <form className="buscador-form">
             <input
               placeholder="Buscar tarea"
               onChange={handleChangeSearchString}
@@ -30,9 +42,6 @@ const Contador = ({
           </form>
         </div>
       )}
-      <p className="cantidad-pendientes">
-        Pendientes: <span>3</span>
-      </p>
     </div>
   );
 };

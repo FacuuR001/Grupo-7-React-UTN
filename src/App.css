@@ -1,23 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Inter:wght@400;500;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter;
-}
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #3e9fdb, #5844e9);
+  background: var(--gradient-color);
 }
 
 .h1 {
-  color: #000;
-  font-family: Inter;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -30,7 +19,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .buscar-tarea {
@@ -38,10 +27,36 @@
   height: 600px;
   max-height: 600px;
   border-radius: 50px;
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 2rem 3rem;
 }
 
 .logo {
   width: 70px;
+}
+
+@media (max-width: 920px) {
+  .buscar-tarea {
+    width: 550px;
+    height: 550px
+  }
+}
+
+@media (max-width: 580px) {
+  .buscar-tarea {
+    width: 370px;
+    height: 600px;
+  } 
+
+  .cabecera {
+    margin-bottom: 2rem;
+  }
+
+  .h1 {
+    font-size: 25px;
+  }
+
+  .logo {
+    width: 50px;
+  }
 }

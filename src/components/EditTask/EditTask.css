@@ -1,42 +1,27 @@
-
-.nuevatarea {
-  width: 846px;
-  height: 50px;
-}
-
-.principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nuevatarea:hover {
-  background-color: var(--color-primary-hover);
-}
-
-.agregar-tarea-titulo {
+.editar-tarea-titulo {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.form-nueva-tarea {
+.form-editar-tarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.titulo-input {
+.titulo-input-editar {
   width: 530px;
   height: 40px;
   border-radius: 6px;
   border: 1px solid var(--color-border-input);
 }
 
-.descripcion {
+.descripcion-editar {
   margin-top: 2rem;
 }
 
-.descripcion-task {
+.descripcion-task-editar {
   width: 530px;
   height: 200px;
   border-radius: 6px;
@@ -44,11 +29,11 @@
 
 }
 
-.btn-agregar-tarea {
+.btn-editar-tarea {
   margin-top: 6.5rem;
 }
 
-.modal-agregar {
+.modal-editar {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -60,9 +45,21 @@
   border-radius: 6px;
 }
 
+.edit-task {
+  color: var(--color-edit-task);
+  margin-right: .5rem;
+}
+
+.delete-task, .edit-task {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin-top: 1rem;
+  cursor: pointer;
+}
 
 @media (max-width: 580px) {
-  .modal-agregar {
+  .modal-editar {
     width: 500px;
     padding: 1.5rem 1rem 1rem 1rem;
   }
@@ -71,3 +68,14 @@
     width: 430px;
   }
 }
+
+@media (max-width: 580px) {
+    .modal-editar {
+      width: 500px;
+      padding: 1.5rem 1rem 1rem 1rem;
+    }
+  
+    .titulo-input {
+      width: 430px;
+    }
+  }

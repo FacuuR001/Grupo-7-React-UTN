@@ -1,28 +1,37 @@
 .contadores {
     height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
 }
   
 .contadores span {
-    color: #ff9960;
+    color: var(--color-count-span);
 }
 .search {
-    color: #00abfb;
+    color: var( --color-search);
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
+.buscador {
+    margin-top: 1rem;
+}
+
 .buscador input {
     padding: 10px;
+    width: 780px;
+    outline: none;
 }
-  
+
+.buscador-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cantidad-tareas {
     margin-left: 1rem;
 }
@@ -30,3 +39,21 @@
 .cantidad-pendientes {
     margin-right: 1rem;
 }
+
+.contadores-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 580px) {
+   .contadores-contenedor {
+    flex-direction: column;
+    gap: 10px;
+   }
+
+   .contadores {
+    margin-bottom: 8rem
+   }
+  }
+  
